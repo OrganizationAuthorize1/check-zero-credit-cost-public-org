@@ -53,9 +53,9 @@ jobs:
         - clang --version
         #- live-config --version
         - uname -a
-        - uname -p
-        - uname --m
-        - uname -o
+#         - uname -p
+#         - uname --m
+#         - uname -o
         - lshw -short
       vm:
         size: medium
@@ -93,14 +93,14 @@ jobs:
         - cmake --version
         - git --version
         - git --help
-        - hg --version
-        - svn --version
-        - clang --version
+        #- hg --version
+        #- svn --version
+        #- clang --version
         #- live-config --version
         - uname -a
-        - uname -p
-        - uname --m
-        - uname -o
+#         - uname -p
+#         - uname --m
+#         - uname -o
         - lshw -short
       vm:
         size: medium
@@ -148,14 +148,14 @@ jobs:
         - cmake --version
         - git --version
         - git --help
-        - hg --version
-        - svn --version
-        - clang --version
+#         - hg --version
+#         - svn --version
+#         - clang --version
         #- live-config --version
         - uname -a
-        - uname -p
-        - uname --m
-        - uname -o
+#         - uname -p
+#         - uname --m
+#         - uname -o
         - lshw -short
       vm:
         size: large
