@@ -204,3 +204,184 @@ jobs:
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
         - ./hello_world
+    
+    - os: windows
+      language: python
+      arch: amd64
+      vm:
+        size: medium
+      script:
+        - python hello_world.py
+    - os: windows
+      language: python
+      arch: amd64
+      vm:
+        size: large
+      script:
+        - python hello_world.py
+    - os: windows
+      language: python
+      arch: amd64
+      vm:
+        size: x-large
+      script:
+        - python hello_world.py
+    - os: windows
+      language: python
+      arch: amd64
+      vm:
+        size: 2x-large
+      script:
+        - python hello_world.py
+    - os: osx
+      language: python
+      arch: amd64
+      vm:
+        size: medium
+      script:
+        - python hello_world.py
+    - os: osx
+      language: python
+      arch: amd64
+      vm:
+        size: large
+      script:
+        - python hello_world.py
+    - os: osx
+      language: python
+      arch: amd64
+      vm:
+        size: x-large
+      script:
+        - python hello_world.py
+    - os: osx
+      language: python
+      arch: amd64
+      vm:
+        size: 2x-large
+      script:
+        - python hello_world.py
+    - os: freebsd
+      language: python
+      arch: amd64
+      vm:
+        size: medium
+      script:
+        - python hello_world.py
+    - os: freebsd
+      language: python
+      arch: amd64
+      vm:
+        size: large
+      script:
+        - python hello_world.py
+    - os: freebsd
+      language: python
+      arch: amd64
+      vm:
+        size: x-large
+      script:
+        - python hello_world.py
+    - os: freebsd
+      language: python
+      arch: amd64
+      vm:
+        size: 2x-large
+      script:
+        - python hello_world.py
+    - os: linux
+      language: python
+      arch: amd64
+      dist: focal
+      vm:
+        size: medium
+      script:
+        - python hello_world.py
+    - os: linux
+      language: python
+      arch: amd64
+      dist: focal
+      vm:
+        size: large
+      script:
+        - python hello_world.py
+    - os: linux
+      language: python
+      arch: amd64
+      dist: focal
+      vm:
+        size: x-large
+      script:
+        - python hello_world.py
+    - os: linux
+      language: python
+      arch: amd64
+      dist: focal
+      vm:
+        size: 2x-large
+      script:
+        - python hello_world.py
+    - os: linux
+      language: python
+      arch: amd64
+      dist: xenial
+      vm:
+        size: medium
+      script:
+        - python hello_world.py
+    - os: linux
+      language: python
+      arch: amd64
+      dist: xenial
+      vm:
+        size: large
+      script:
+        - python hello_world.py
+    - os: linux
+      language: python
+      arch: amd64
+      dist: xenial
+      vm:
+        size: x-large
+      script:
+        - python hello_world.py
+    - os: linux
+      language: python
+      arch: amd64
+      dist: xenial
+      vm:
+        size: 2x-large
+      script:
+        - python hello_world.py
+    - os: linux
+      language: python
+      arch: amd64
+      dist: bionic
+      vm:
+        size: medium
+      script:
+        - python hello_world.py
+    - os: linux
+      language: python
+      arch: amd64
+      dist: bionic
+      vm:
+        size: large
+      script:
+        - python hello_world.py
+    - os: linux
+      language: python
+      arch: amd64
+      dist: bionic
+      vm:
+        size: x-large
+      script:
+        - python hello_world.py
+    - os: linux
+      language: python
+      arch: amd64
+      dist: bionic
+      vm:
+        size: 2x-large
+      script:
+        - python hello_world.py
