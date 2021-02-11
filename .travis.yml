@@ -14,6 +14,8 @@ jobs:
         #- clang --version
         #- live-config --version
         - systeminfo
+        - wmic cpu get caption, deviceid, name, numberofcores, maxclockspeed, status
+        - lscpu
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
         - ./hello_world
@@ -100,12 +102,11 @@ jobs:
         #- clang --version
         #- live-config --version
         - uname -a
-        - lscpu
-        - free -h
+        - dmesg
 #         - uname -p
 #         - uname --m
 #         - uname -o
-        - lshw -short
+        #- lshw -short
       vm:
         size: medium
       script:
@@ -259,34 +260,34 @@ jobs:
         - clang -coverage -O0 hello_world.c -o hello_world
         - ./hello_world
     
-    - os: windows
-      language: python
-      arch: amd64
-      vm:
-        size: medium
-      script:
-        - python hello_world.py
-    - os: windows
-      language: python
-      arch: amd64
-      vm:
-        size: large
-      script:
-        - python hello_world.py
-    - os: windows
-      language: python
-      arch: amd64
-      vm:
-        size: x-large
-      script:
-        - python hello_world.py
-    - os: windows
-      language: python
-      arch: amd64
-      vm:
-        size: 2x-large
-      script:
-        - python hello_world.py
+#     - os: windows
+#       language: python
+#       arch: amd64
+#       vm:
+#         size: medium
+#       script:
+#         - python hello_world.py
+#     - os: windows
+#       language: python
+#       arch: amd64
+#       vm:
+#         size: large
+#       script:
+#         - python hello_world.py
+#     - os: windows
+#       language: python
+#       arch: amd64
+#       vm:
+#         size: x-large
+#       script:
+#         - python hello_world.py
+#     - os: windows
+#       language: python
+#       arch: amd64
+#       vm:
+#         size: 2x-large
+#       script:
+#         - python hello_world.py
     - os: osx
       language: python
       arch: amd64
