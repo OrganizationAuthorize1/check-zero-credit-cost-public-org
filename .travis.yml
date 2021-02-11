@@ -9,10 +9,10 @@ jobs:
         - cmake --version
         - git --version
         - git --help
-        - hg --version
-        - svn --version
-        - clang --version
-        - live-config --version
+        #- hg --version
+        #- svn --version
+        #- clang --version
+        #- live-config --version
         - systeminfo
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
@@ -51,7 +51,7 @@ jobs:
         - hg --version
         - svn --version
         - clang --version
-        - live-config --version
+        #- live-config --version
         - inxi
       vm:
         size: medium
@@ -92,7 +92,7 @@ jobs:
         - hg --version
         - svn --version
         - clang --version
-        - live-config --version
+        #- live-config --version
         - systeminfo
       vm:
         size: medium
@@ -143,7 +143,7 @@ jobs:
         - hg --version
         - svn --version
         - clang --version
-        - live-config --version
+        #- live-config --version
         - systeminfo
       vm:
         size: large
