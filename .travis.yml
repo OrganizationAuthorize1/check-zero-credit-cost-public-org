@@ -52,7 +52,11 @@ jobs:
         - svn --version
         - clang --version
         #- live-config --version
-        - inxi
+        - uname -a
+        - uname -p
+        - uname --m
+        - uname -o
+        - lshw -short
       vm:
         size: medium
       script:
@@ -93,7 +97,11 @@ jobs:
         - svn --version
         - clang --version
         #- live-config --version
-        - systeminfo
+        - uname -a
+        - uname -p
+        - uname --m
+        - uname -o
+        - lshw -short
       vm:
         size: medium
       script:
@@ -144,7 +152,11 @@ jobs:
         - svn --version
         - clang --version
         #- live-config --version
-        - systeminfo
+        - uname -a
+        - uname -p
+        - uname --m
+        - uname -o
+        - lshw -short
       vm:
         size: large
       script:
