@@ -11,7 +11,6 @@ jobs:
         - git --help
         - systeminfo
         - wmic cpu get deviceid, name, numberofcores, numberoflogicalprocessors, maxclockspeed, status
-        - wmic cpu list /format:list
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
         - ./hello_world
@@ -25,7 +24,7 @@ jobs:
         - git --version
         - git --help
         - systeminfo
-        - wmic cpu get caption, deviceid, name, numberofcores, maxclockspeed, status
+        - wmic cpu get deviceid, name, numberofcores, numberoflogicalprocessors, maxclockspeed, status
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
         - ./hello_world
@@ -39,7 +38,7 @@ jobs:
         - git --version
         - git --help
         - systeminfo
-        - wmic cpu get caption, deviceid, name, numberofcores, maxclockspeed, status
+        - wmic cpu get deviceid, name, numberofcores, numberoflogicalprocessors, maxclockspeed, status
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
         - ./hello_world
@@ -53,7 +52,7 @@ jobs:
         - git --version
         - git --help
         - systeminfo
-        - wmic cpu get caption, deviceid, name, numberofcores, maxclockspeed, status
+        - wmic cpu get deviceid, name, numberofcores, numberoflogicalprocessors, maxclockspeed, status
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
         - ./hello_world
