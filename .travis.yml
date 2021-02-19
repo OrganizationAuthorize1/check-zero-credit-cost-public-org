@@ -42,20 +42,20 @@ jobs:
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
         - ./hello_world
-    - os: windows
-      language: c
-      arch: amd64
-      vm:
-        size: 2x-large
-      before_install:
-        - cmake --version
-        - git --version
-        - git --help
-        - systeminfo
-        - wmic cpu get deviceid, name, numberofcores, numberoflogicalprocessors, maxclockspeed, status
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
+#     - os: windows
+#       language: c
+#       arch: amd64
+#       vm:
+#         size: 2x-large
+#       before_install:
+#         - cmake --version
+#         - git --version
+#         - git --help
+#         - systeminfo
+#         - wmic cpu get deviceid, name, numberofcores, numberoflogicalprocessors, maxclockspeed, status
+#       script:
+#         - clang -coverage -O0 hello_world.c -o hello_world
+#         - ./hello_world
     - os: osx
       language: c
       arch: amd64
@@ -113,25 +113,25 @@ jobs:
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
         - ./hello_world
-    - os: osx
-      language: c
-      arch: amd64
-      vm:
-        size: 2x-large
-      before_install:
-        - cmake --version
-        - git --version
-        - git --help
-        - hg --version
-        - svn --version
-        - clang --version
-        - uname -a
-        - lscpu
-        - free -h
-        - lshw -short
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
+#     - os: osx
+#       language: c
+#       arch: amd64
+#       vm:
+#         size: 2x-large
+#       before_install:
+#         - cmake --version
+#         - git --version
+#         - git --help
+#         - hg --version
+#         - svn --version
+#         - clang --version
+#         - uname -a
+#         - lscpu
+#         - free -h
+#         - lshw -short
+#       script:
+#         - clang -coverage -O0 hello_world.c -o hello_world
+#         - ./hello_world
     - os: freebsd
       language: c
       arch: amd64
@@ -174,20 +174,20 @@ jobs:
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
         - ./hello_world
-    - os: freebsd
-      language: c
-      arch: amd64
-      vm:
-        size: 2x-large
-      before_install:
-        - cmake --version
-        - git --version
-        - git --help
-        - uname -a
-        - dmesg
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
+#     - os: freebsd
+#       language: c
+#       arch: amd64
+#       vm:
+#         size: 2x-large
+#       before_install:
+#         - cmake --version
+#         - git --version
+#         - git --help
+#         - uname -a
+#         - dmesg
+#       script:
+#         - clang -coverage -O0 hello_world.c -o hello_world
+#         - ./hello_world
     - os: linux
       language: c
       arch: amd64
@@ -239,23 +239,23 @@ jobs:
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
         - ./hello_world
-    - os: linux
-      language: c
-      arch: amd64
-      dist: focal
-      vm:
-        size: 2x-large
-      before_install:
-        - cmake --version
-        - git --version
-        - git --help
-        - uname -a
-        - lscpu
-        - free -h
-        - lshw -short
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
+#     - os: linux
+#       language: c
+#       arch: amd64
+#       dist: focal
+#       vm:
+#         size: 2x-large
+#       before_install:
+#         - cmake --version
+#         - git --version
+#         - git --help
+#         - uname -a
+#         - lscpu
+#         - free -h
+#         - lshw -short
+#       script:
+#         - clang -coverage -O0 hello_world.c -o hello_world
+#         - ./hello_world
     - os: linux
       language: c
       arch: amd64
@@ -307,23 +307,23 @@ jobs:
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
         - ./hello_world
-    - os: linux
-      language: c
-      arch: amd64
-      dist: xenial
-      vm:
-        size: 2x-large
-      before_install:
-        - cmake --version
-        - git --version
-        - git --help
-        - uname -a
-        - lscpu
-        - free -h
-        - lshw -short
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
+#     - os: linux
+#       language: c
+#       arch: amd64
+#       dist: xenial
+#       vm:
+#         size: 2x-large
+#       before_install:
+#         - cmake --version
+#         - git --version
+#         - git --help
+#         - uname -a
+#         - lscpu
+#         - free -h
+#         - lshw -short
+#       script:
+#         - clang -coverage -O0 hello_world.c -o hello_world
+#         - ./hello_world
     - os: linux
       language: c
       arch: amd64
@@ -375,20 +375,20 @@ jobs:
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
         - ./hello_world
-    - os: linux
-      language: c
-      arch: amd64
-      dist: bionic
-      vm:
-        size: 2x-large
-      before_install:
-        - cmake --version
-        - git --version
-        - git --help
-        - uname -a
-        - lscpu
-        - free -h
-        - lshw -short
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
+#     - os: linux
+#       language: c
+#       arch: amd64
+#       dist: bionic
+#       vm:
+#         size: 2x-large
+#       before_install:
+#         - cmake --version
+#         - git --version
+#         - git --help
+#         - uname -a
+#         - lscpu
+#         - free -h
+#         - lshw -short
+#       script:
+#         - clang -coverage -O0 hello_world.c -o hello_world
+#         - ./hello_world
