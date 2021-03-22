@@ -2,9 +2,7 @@ jobs:
   include:
     - os: windows
       language: c
-      arch: amd64
-      vm:
-        size: medium
+      arch: arm64
       before_install:
         - cmake --version
         - git --version
@@ -16,9 +14,7 @@ jobs:
         - ./hello_world
     - os: windows
       language: c
-      arch: amd64
-      vm:
-        size: large
+      arch: ppc64le
       before_install:
         - cmake --version
         - git --version
@@ -30,23 +26,7 @@ jobs:
         - ./hello_world
     - os: windows
       language: c
-      arch: amd64
-      vm:
-        size: x-large
-      before_install:
-        - cmake --version
-        - git --version
-        - git --help
-        - systeminfo
-        - wmic cpu get deviceid, name, numberofcores, numberoflogicalprocessors, maxclockspeed, status
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
-    - os: windows
-      language: c
-      arch: amd64
-      vm:
-        size: 2x-large
+      arch: s390x
       before_install:
         - cmake --version
         - git --version
@@ -58,9 +38,7 @@ jobs:
         - ./hello_world
     - os: osx
       language: c
-      arch: amd64
-      vm:
-        size: medium
+      arch: arm64
       before_install:
         - cmake --version
         - git --version
@@ -77,9 +55,7 @@ jobs:
         - ./hello_world
     - os: osx
       language: c
-      arch: amd64
-      vm:
-        size: large
+      arch: ppc64le
       before_install:
         - cmake --version
         - git --version
@@ -96,28 +72,7 @@ jobs:
         - ./hello_world
     - os: osx
       language: c
-      arch: amd64
-      vm:
-        size: x-large
-      before_install:
-        - cmake --version
-        - git --version
-        - git --help
-        - hg --version
-        - svn --version
-        - clang --version
-        - uname -a
-        - lscpu
-        - free -h
-        - lshw -short
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
-    - os: osx
-      language: c
-      arch: amd64
-      vm:
-        size: 2x-large
+      arch: s390x
       before_install:
         - cmake --version
         - git --version
@@ -134,9 +89,7 @@ jobs:
         - ./hello_world
     - os: freebsd
       language: c
-      arch: amd64
-      vm:
-        size: medium
+      arch: arm64
       before_install:
         - cmake --version
         - git --version
@@ -148,9 +101,7 @@ jobs:
         - ./hello_world
     - os: freebsd
       language: c
-      arch: amd64
-      vm:
-        size: large
+      arch: ppc64le
       before_install:
         - cmake --version
         - git --version
@@ -162,9 +113,7 @@ jobs:
         - ./hello_world
     - os: freebsd
       language: c
-      arch: amd64
-      vm:
-        size: x-large
+      arch: s390x
       before_install:
         - cmake --version
         - git --version
@@ -174,13 +123,10 @@ jobs:
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
         - ./hello_world
-    
     - os: linux
       language: c
-      arch: amd64
+      arch: arm64
       dist: focal
-      vm:
-        size: medium
       before_install:
         - cmake --version
         - git --version
@@ -194,10 +140,8 @@ jobs:
         - ./hello_world
     - os: linux
       language: c
-      arch: amd64
+      arch: ppc64le
       dist: focal
-      vm:
-        size: large
       before_install:
         - cmake --version
         - git --version
@@ -211,10 +155,8 @@ jobs:
         - ./hello_world
     - os: linux
       language: c
-      arch: amd64
+      arch: s390x
       dist: focal
-      vm:
-        size: x-large
       before_install:
         - cmake --version
         - git --version
@@ -228,27 +170,8 @@ jobs:
         - ./hello_world
     - os: linux
       language: c
-      arch: amd64
-      dist: focal
-      vm:
-        size: 2x-large
-      before_install:
-        - cmake --version
-        - git --version
-        - git --help
-        - uname -a
-        - lscpu
-        - free -h
-        - lshw -short
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
-    - os: linux
-      language: c
-      arch: amd64
+      arch: arm64
       dist: xenial
-      vm:
-        size: medium
       before_install:
         - cmake --version
         - git --version
@@ -262,10 +185,8 @@ jobs:
         - ./hello_world
     - os: linux
       language: c
-      arch: amd64
+      arch: ppc64le
       dist: xenial
-      vm:
-        size: large
       before_install:
         - cmake --version
         - git --version
@@ -279,10 +200,8 @@ jobs:
         - ./hello_world
     - os: linux
       language: c
-      arch: amd64
+      arch: s390x
       dist: xenial
-      vm:
-        size: x-large
       before_install:
         - cmake --version
         - git --version
@@ -296,27 +215,8 @@ jobs:
         - ./hello_world
     - os: linux
       language: c
-      arch: amd64
-      dist: xenial
-      vm:
-        size: 2x-large
-      before_install:
-        - cmake --version
-        - git --version
-        - git --help
-        - uname -a
-        - lscpu
-        - free -h
-        - lshw -short
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
-    - os: linux
-      language: c
-      arch: amd64
+      arch: arm64
       dist: bionic
-      vm:
-        size: medium
       before_install:
         - cmake --version
         - git --version
@@ -330,10 +230,8 @@ jobs:
         - ./hello_world
     - os: linux
       language: c
-      arch: amd64
+      arch: ppc64le
       dist: bionic
-      vm:
-        size: large
       before_install:
         - cmake --version
         - git --version
@@ -347,10 +245,8 @@ jobs:
         - ./hello_world
     - os: linux
       language: c
-      arch: amd64
+      arch: s390x
       dist: bionic
-      vm:
-        size: x-large
       before_install:
         - cmake --version
         - git --version
@@ -359,37 +255,6 @@ jobs:
         - lscpu
         - free -h
         - lshw -short
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
-    - os: linux
-      language: c
-      arch: amd64
-      dist: bionic
-      vm:
-        size: 2x-large
-      before_install:
-        - cmake --version
-        - git --version
-        - git --help
-        - uname -a
-        - lscpu
-        - free -h
-        - lshw -short
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
-    - os: freebsd
-      language: c
-      arch: amd64
-      vm:
-        size: 2x-large
-      before_install:
-        - cmake --version
-        - git --version
-        - git --help
-        - uname -a
-        - dmesg
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
         - ./hello_world
