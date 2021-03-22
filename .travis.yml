@@ -36,57 +36,57 @@ jobs:
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
         - ./hello_world
-#     - os: osx
-#       language: c
-#       arch: arm64
-#       before_install:
-#         - cmake --version
-#         - git --version
-#         - git --help
-#         - hg --version
-#         - svn --version
-#         - clang --version
-#         - uname -a
-#         - lscpu
-#         - free -h
-#         - lshw -short
-#       script:
-#         - clang -coverage -O0 hello_world.c -o hello_world
-#         - ./hello_world
-#     - os: osx
-#       language: c
-#       arch: ppc64le
-#       before_install:
-#         - cmake --version
-#         - git --version
-#         - git --help
-#         - hg --version
-#         - svn --version
-#         - clang --version
-#         - uname -a
-#         - lscpu
-#         - free -h
-#         - lshw -short
-#       script:
-#         - clang -coverage -O0 hello_world.c -o hello_world
-#         - ./hello_world
-#     - os: osx
-#       language: c
-#       arch: s390x
-#       before_install:
-#         - cmake --version
-#         - git --version
-#         - git --help
-#         - hg --version
-#         - svn --version
-#         - clang --version
-#         - uname -a
-#         - lscpu
-#         - free -h
-#         - lshw -short
-#       script:
-#         - clang -coverage -O0 hello_world.c -o hello_world
-#         - ./hello_world
+    - os: osx
+      language: c
+      arch: arm64
+      before_install:
+        - cmake --version
+        - git --version
+        - git --help
+        - hg --version
+        - svn --version
+        - clang --version
+        - uname -a
+        - lscpu
+        - free -h
+        - lshw -short
+      script:
+        - clang -coverage -O0 hello_world.c -o hello_world
+        - ./hello_world
+    - os: osx
+      language: c
+      arch: ppc64le
+      before_install:
+        - cmake --version
+        - git --version
+        - git --help
+        - hg --version
+        - svn --version
+        - clang --version
+        - uname -a
+        - lscpu
+        - free -h
+        - lshw -short
+      script:
+        - clang -coverage -O0 hello_world.c -o hello_world
+        - ./hello_world
+    - os: osx
+      language: c
+      arch: s390x
+      before_install:
+        - cmake --version
+        - git --version
+        - git --help
+        - hg --version
+        - svn --version
+        - clang --version
+        - uname -a
+        - lscpu
+        - free -h
+        - lshw -short
+      script:
+        - clang -coverage -O0 hello_world.c -o hello_world
+        - ./hello_world
     - os: freebsd
       language: c
       arch: arm64
